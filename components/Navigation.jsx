@@ -1,14 +1,17 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import SigninButton from "./SigninButton";
 
 const Navigation = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-      <div className="container">
-        <Link className="navbar-brand" href="/">
-          Next First App
+      <div className="container text-center justify-content-center d-flex">
+        <Link className="navbar-brand text-center" href="/">
+          Next App
         </Link>
-        <button
+        <SigninButton />
+        {/* <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -18,8 +21,8 @@ const Navigation = () => {
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        </button> */}
+        {/* <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link className="nav-link" href="/about">
@@ -32,7 +35,7 @@ const Navigation = () => {
               </Link>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

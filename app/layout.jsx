@@ -1,6 +1,7 @@
-import Navigation from "@/components/Navigation";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Navigation from "../components/Navigation";
+import Providers from "../components/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +21,10 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={inter.className}>
-        <Navigation />
-        <div className="container p-4">{children}</div>
+        <Providers>
+          <Navigation />
+          <div className="container p-4"> {children}</div>
+        </Providers>
       </body>
     </html>
   );
